@@ -1,15 +1,15 @@
-import ContainerX from './ContainerX';
+import ContainerX from './ui/ContainerX';
 
 const navList = [
-  { name: "Projects", link: "#" },
-  { name: "Skills", link: "#" },
-  { name: "About", link: "#" },
-  { name: "Contact", link: "#" }
+  { name: "Projects", link: "#section-projects" },
+  { name: "Skills", link: "#section-skills" },
+  { name: "About", link: "#section-about" },
+  { name: "Contact", link: "#section-contact" }
 ]
 
 export default function Navbar() {
   return (
-    <nav className='fixed w-full'>
+    <nav className='w-full z-10'>
       <ContainerX>
 
         <div className='py-2 flex justify-between'>

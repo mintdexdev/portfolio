@@ -1,0 +1,36 @@
+import { ButtonLight } from '@/components/ui/Button';
+import ContainerX from '@/components/ui/ContainerX';
+import { socialList } from '@/data/links';
+
+
+export default function About() {
+  return (
+
+    <section
+      id='section-about' >
+      <ContainerX>
+        <div className='section-about h-screen min-h-[640px] flex items-center justify-center'>
+
+          <div>
+            <div className='max-w-[50ch] bg text-l2 text-justify'>
+              <p className='my-12'>I am 'Deepak Gobari', or you can call me 'Dex'. I recently graduated with a Bachelor's degree in Computer Applications.</p>
+              <p className='my-12'>I am passionate about frontend development & design, driven by my love for technology and creativity. I aspire to craft digital experiences that are as functional as they are visually engaging.</p>
+              <p className='my-12'>I am working toward building my career in field of Frontend Development & Design, creating interactive user experience.</p>
+            </div>
+            <div className='flex justify-end'>
+              <a
+                href={socialList.github.link}
+                title='View my GitHub Profile'
+                target='_blank'
+              >
+                <ButtonLight>
+                  View my Github ↗
+                </ButtonLight>
+              </a>
+            </div>
+          </div>
+        </div>
+      </ContainerX>
+    </section>
+  )
+}

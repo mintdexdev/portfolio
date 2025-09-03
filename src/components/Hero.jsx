@@ -1,4 +1,4 @@
-import ContainerX from '@/components/ContainerX';
+import ContainerX from '@/components/ui/ContainerX';
 
 export default function Hero() {
   return (

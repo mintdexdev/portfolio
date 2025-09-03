@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ContainerX from '@/components/ContainerX';
+import ContainerX from '@/components/ui/ContainerX';
+import { ButtonLightOutline } from './ui/Button';
 
 export default function Footer() {
   const [currentTime, setCurrentTime] = useState("");
@@ -29,10 +30,12 @@ export default function Footer() {
 
   return (
 
-    <footer className='bg-black'>
+    <footer className='bg-black '>
       <ContainerX>
 
-        <nav className=''>
+
+        <nav className='pt-20 relative'>
+
           <h2 className='text-l4 text-center border-b'>Links</h2>
           <div className='flex justify-around py-10'>
             <ul >
@@ -55,6 +58,12 @@ export default function Footer() {
             </ul>
           </div>
 
+          <a className='absolute right-0 bottom-0'
+            href="#section-hero">
+            <ButtonLightOutline>
+              Go To Top ↑
+            </ButtonLightOutline>
+          </a>
 
         </nav>
 
