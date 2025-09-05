@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 import { projectList } from '@/data/projectList.js';
 
 import ContainerX from '@/components/ui/ContainerX'
@@ -5,11 +7,50 @@ import ProjectCard from '@/components/ui/ProjectCard'
 import { ButtonDark } from './ui/Button';
 import { allProjectLink } from '@/data/links';
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Projects() {
+
+  const sectionRef = useRef();
+
+  useGSAP(() => {
+    const section = sectionRef.current;
+
+    gsap.from(section, {
+      scale: 0.90,
+      scrollTrigger: {
+        trigger: section,
+        start: "top bottom",
+        end: "top 50%",
+        scrub: true
+      },
+      ease: "power1.out"
+    })
+    gsap.to(section, {
+      scale: 0.90,
+      scrollTrigger: {
+        trigger: section,
+        start: "bottom 50%",
+        end: "bottom 0%",
+        scrub: true
+      },
+      ease: "power1.out"
+    })
+
+  }, { scope: sectionRef })
+
+
   return (
-    <section id='section-projects'>
+    <section
+      id='section-projects'
+      ref={sectionRef}
+    >
       <div className='section-projects py-10 rounded-2xl'>
         <ContainerX>
           <h2 className='mb-20 text-l9 text-center'>Projects</h2>

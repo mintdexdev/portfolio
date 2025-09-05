@@ -9,7 +9,7 @@ export default function About() {
     <section
       id='section-about' >
       <ContainerX>
-        <div className='section-about h-screen min-h-[640px] flex items-center justify-center'>
+        <div className=' section-about h-screen min-h-[640px] flex items-center justify-center'>
 
           <div>
             <div className='max-w-[50ch] bg text-l2 text-justify'>
