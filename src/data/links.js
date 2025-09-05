@@ -1,4 +1,8 @@
 export const socialList = {
+  linkedIn: {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/mintdexdev/"
+  },
   github: {
     name: "GitHub",
     link: "https://github.com/mintdexdev"

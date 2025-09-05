@@ -1,11 +1,5 @@
 import ContainerX from './ui/ContainerX';
-
-const navList = [
-  { name: "Projects", link: "#section-projects" },
-  { name: "Skills", link: "#section-skills" },
-  { name: "About", link: "#section-about" },
-  { name: "Contact", link: "#section-contact" }
-]
+import { navList } from '@/data/navList'
 
 export default function Navbar() {
   return (
@@ -19,13 +13,13 @@ export default function Navbar() {
             mintdexdev
           </a>
 
-          <ol className='flex gap-12'>
+          <ul className='flex gap-12'>
             {navList.map((item) => (
               <li key={item.name}>
                 <a href={item.link}>{item.name}</a>
               </li>
             ))}
-          </ol>
+          </ul>
 
         </div>
 
