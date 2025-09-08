@@ -7,7 +7,6 @@ import Contact from '../components/Contact';
 import About from '../components/About';
 import Stack from '../components/Stack';
 import Projects from '../components/Projects';
-import Noise from '@/components/ui/Noise';
 import Skills from '@/components/Skills';
 
 export default function App() {
@@ -32,7 +31,6 @@ export default function App() {
 
       <Footer />
 
-      <Noise />
     </>
   )
 }
