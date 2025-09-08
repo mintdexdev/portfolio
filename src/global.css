@@ -123,6 +123,11 @@ a {
   padding-inline: clamp(20px, 15.3846px + 1.2821vw, 40px);
 }
 
+.navbar {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
 .section-projects,
 .section-contact {
   background-color: var(--color-secondary);
@@ -142,6 +147,7 @@ a {
 .skills-card {
   background-color: var(--color-primary);
 }
-.skills-card > :last-child {
+
+.skills-card> :last-child {
   border-color: from();
 }
