@@ -11,11 +11,13 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useViewportSize } from '@/context/ViewportSize';
 
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Projects() {
+  const viewportSize = useViewportSize()
 
   const [currentIndex, setCurrentIndex] = useState(1)
 
@@ -75,13 +77,16 @@ export default function Projects() {
         <ContainerX>
           <h2 className='mb-20 text-l9 text-center'>Projects</h2>
 
-          <div className='flex gap-10 relative justify-center'>
+          <div className='flex gap-10 relative justify-center flex-col lg:flex-row'>
 
-            <div className='h-screen grid place-items-center sticky top-0 '>
-              <div className='index-number font-mono'>
-                0{currentIndex}
-              </div>
-            </div>
+            {viewportSize == "large" ?
+              <div className='h-screen grid place-items-center sticky top-0 '>
+                <div className='index-number font-mono'>
+                  0{currentIndex}
+                </div>
+              </div> :
+              null
+            }
 
             <div >
               {projectList.map((item, idx) => (

@@ -16,10 +16,19 @@ export default function ProjectCard(
       <img className='w-full  aspect-video rounded-2xl border'
         src={imgSrc}
         alt="" />
-      <div className='mt-8 flex justify-between items-end'>
-        <p className='text-l2'>{name}</p>
+
+      <div className="flex gap-2 mt-4 flex-wrap">
+        {tags.map((item) => (
+          <Tag key={item}>{item}</Tag>
+        ))}
+      </div>
+
+      <div className='flex flex-col  md:flex-row md:justify-between md:items-end'>
+
+        <p className='my-2 text-l2 md:mt-8'>{name}</p>
+
         <div className='h-fit flex gap-4'>
-          <a
+          <a className="text-sm"
             href={sourceCodeLink}
             target='_blank'
             title='View Source Code for this Project'
@@ -28,7 +37,7 @@ export default function ProjectCard(
               View Source Code ↗
             </ButtonDark>
           </a>
-          <a
+          <a className="text-sm"
             href={liveLink}
             target='_blank'
             title='View Live Preview of this project'
@@ -38,12 +47,9 @@ export default function ProjectCard(
             </ButtonDark>
           </a>
         </div>
+
       </div>
-      <div className="flex gap-2 mt-4 flex-wrap">
-        {tags.map((item) => (
-          <Tag key={item}>{item}</Tag>
-        ))}
-      </div>
+
     </div>
   )
 }
