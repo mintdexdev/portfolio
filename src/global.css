@@ -151,3 +151,8 @@ a {
 .skills-card> :last-child {
   border-color: from();
 }
+
+.index-number {
+  font-size: clamp(12rem, -1.7143rem + 21.4286vw, 24rem);
+  font-weight: bold;
+}

@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import { projectList } from '@/data/projectList.js';
 
@@ -17,33 +17,55 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Projects() {
 
+  const [currentIndex, setCurrentIndex] = useState(1)
+
   const sectionRef = useRef();
+
+  const numberRef = useRef();
 
   useGSAP(() => {
     const section = sectionRef.current;
 
-    gsap.from(section, {
-      scale: 0.90,
-      scrollTrigger: {
-        trigger: section,
-        start: "top bottom",
-        end: "top 50%",
-        scrub: true
-      },
-      ease: "power1.out"
-    })
-    gsap.to(section, {
-      scale: 0.90,
-      scrollTrigger: {
-        trigger: section,
-        start: "bottom 50%",
-        end: "bottom 0%",
-        scrub: true
-      },
-      ease: "power1.out"
-    })
+    gsap.fromTo(section,
+      { scale: 0.9 },
+      {
+        scale: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top bottom",
+          end: "top center",
+          scrub: true,
+        },
+        ease: "power1.out"
+      }
+    );
 
+    gsap.fromTo(section,
+      { scale: 1 },
+      {
+        scale: 0.9,
+        scrollTrigger: {
+          trigger: section,
+          start: "bottom center",
+          end: "bottom top",
+          scrub: true,
+        },
+        ease: "power1.out"
+      }
+    );
   }, { scope: sectionRef })
+
+
+  useGSAP(() => {
+    projectList.forEach((_, idx) => {
+      ScrollTrigger.create({
+        trigger: `[data-index="${idx}"]`,
+        start: "top 80%", // 20% from bottom
+        onEnter: () => setCurrentIndex(idx + 1),
+        onEnterBack: () => setCurrentIndex(idx + 1),
+      });
+    });
+  })
 
 
   return (
@@ -55,20 +77,21 @@ export default function Projects() {
         <ContainerX>
           <h2 className='mb-20 text-l9 text-center'>Projects</h2>
 
-          <div className='flex gap-20 relative justify-center'>
-
+          <div className='flex gap-10 relative justify-center'>
 
             <div className='h-screen grid place-items-center sticky top-0 '>
-              <p className='text-[clamp(15rem,-1.4286rem+17.8571vw,20rem)] font-semibold'>01.</p>
+              <div className='index-number font-mono'>
+                0{currentIndex}
+              </div>
             </div>
 
-
-            <div className=''>
-              {projectList.map((item) => (
+            <div >
+              {projectList.map((item, idx) => (
                 <div className='h-screen min-h-[640px] my-[100px] flex items-center'
                   key={item.name}
                 >
                   <ProjectCard
+                    dataIndex={idx}
                     name={item.name}
                     imgSrc={item.imgSrc}
                     sourceCodeLink={item.sourceCodeLink}
@@ -79,6 +102,7 @@ export default function Projects() {
                 </div>
               ))}
             </div>
+
           </div>
 
           <div className='my-20 '>

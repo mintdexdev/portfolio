@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SkillsCard(
+export default function StackCard(
   {
     title = "Skill Group Title",
     skills = [],

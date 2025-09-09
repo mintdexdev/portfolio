@@ -8,10 +8,11 @@ export default function ProjectCard(
     sourceCodeLink,
     liveLink,
     tags = [],
+    dataIndex,
   }
 ) {
   return (
-    <div className="w-full">
+    <div className="w-full" data-index={dataIndex}>
       <img className='w-full  aspect-video rounded-2xl border'
         src={imgSrc}
         alt="" />
