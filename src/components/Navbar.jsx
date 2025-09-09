@@ -34,7 +34,7 @@ export default function Navbar() {
 
           <a href="/">
             {/* <img src="" alt="image" /> */}
-            mintdexdev
+            DEX
           </a>
 
           <ul className='flex gap-12'>

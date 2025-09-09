@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,GRAD@8..144,100..1000,-200..150&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-mono: "JetBrains Mono", monospace;
-  --font-sans: "Roboto Flex", sans-serif;
+  --font-sans: "Inter", sans-serif;
 }
 
 :root {
@@ -37,7 +37,7 @@ a {
 .text-l9 {
   font-size: calc((160/16) * 1rem);
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .text-l8 {

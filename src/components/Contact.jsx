@@ -31,7 +31,7 @@ export default function Contact() {
               title='send email to dex'
               target='_blank'
             >
-              <ButtonLightOutline>Message on Twitter ↗</ButtonLightOutline>
+              <ButtonLightOutline>Message me on X ↗</ButtonLightOutline>
             </a>
             {/* <a href='#'>Schedule a meeting</a> */}
 

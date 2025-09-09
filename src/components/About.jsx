@@ -14,8 +14,8 @@ export default function About() {
           <div>
             <div className='max-w-[50ch] bg text-l2 text-justify'>
               <p className='my-12'>I am 'Deepak Gobari', or you can call me 'Dex'. I recently graduated with a Bachelor's degree in Computer Applications.</p>
-              <p className='my-12'>I am passionate about frontend development & design, driven by my love for technology and creativity. I aspire to craft digital experiences that are as functional as they are visually engaging.</p>
-              <p className='my-12'>I am working toward building my career in field of Frontend Development & Design, creating interactive user experience.</p>
+              <p className='my-12'>I am passionate about frontend development and Web design, driven by my love for technology and creativity. I aspire to craft digital experiences that are as functional as they are visually engaging.</p>
+              <p className='my-12'>I am working toward building my career by crafting high performance pretty things on the web with interactive user experience.</p>
             </div>
             <div className='flex justify-end'>
               <a

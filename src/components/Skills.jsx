@@ -14,8 +14,7 @@ export default function Skills() {
     skillArray.forEach((skill, i) => {
       gsap.from(skill, {
         opacity: 0,
-        // x: 80,
-        scale: 0.90,
+        x: 120,
         delay: i * 0.1,
         scrollTrigger: {
           trigger: skill,

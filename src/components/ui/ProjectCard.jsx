@@ -16,7 +16,7 @@ export default function ProjectCard(
         src={imgSrc}
         alt="" />
       <div className='mt-8 flex justify-between items-end'>
-        <p className='text-l3'>{name}</p>
+        <p className='text-l2'>{name}</p>
         <div className='h-fit flex gap-4'>
           <a
             href={sourceCodeLink}

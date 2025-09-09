@@ -3,6 +3,7 @@ import { navList } from '@/data/navList'
 import ContainerX from '@/components/ui/ContainerX';
 import { ButtonLightOutline } from './ui/Button';
 import Time from './ui/Time';
+import DeepakGobari from './ui/DeepakGobari';
 
 export default function Footer() {
 
@@ -35,9 +36,7 @@ export default function Footer() {
         </nav>
 
         <Time />
-        <div className='mt-10'>
-          <img src="/assets/deepak-gobari.svg" alt="deepak gobari" />
-        </div>
+        <DeepakGobari />
       </ContainerX>
     </footer>
   )

@@ -21,47 +21,51 @@ export default function Stack() {
             </div>
 
             <div className='w-3/4'>
-
-              <div className=' relative '>
-                {developmentStackList.map((item, index, array) => (
-                  <div
-                    className='sticky'
-                    style={
-                      {
-                        top: `calc(10vh + ${(index * CONSTANTS.StackCardOffset)}px)`,
-                        marginBottom: `${(array.length - index - 1) * CONSTANTS.StackCardOffset}px`,
-                      }
+              {developmentStackList.map((item, index, array) => (
+                <div
+                  className='sticky'
+                  style={
+                    {
+                      top: `calc(10vh + ${(index * CONSTANTS.StackCardOffset)}px)`,
+                      marginBottom: `${(array.length - index - 1) * CONSTANTS.StackCardOffset}px`,
                     }
-                    key={item.title}
-                  >
-                    <StackCard
-                      title={item.title}
-                      skills={item.skills}
-                      index={index}
-                    />
-                  </div>
-                ))}
-              </div>
+                  }
+                  key={item.title}
+                >
+                  <StackCard
+                    title={item.title}
+                    skills={item.skills}
+                    index={index}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
 
-              <div className=' relative '>
-                {designStackList.map((item, index, array) => (
-                  <div className=' sticky '
-                    style={
-                      {
-                        top: `calc(30vh + ${index * CONSTANTS.StackCardOffset}px)`,
-                        marginBottom: `${(array.length - index - 1) * CONSTANTS.StackCardOffset}px`
-                      }
+          <div className='flex gap-4'>
+
+            <div className='w-1/4 min-w-[280px] h-screen sticky top-0 grid place-items-center'>
+              <h3 className='text-l4'>Design</h3>
+            </div>
+
+            <div className='w-3/4'>
+              {designStackList.map((item, index, array) => (
+                <div className=' sticky '
+                  style={
+                    {
+                      top: `calc(30vh + ${index * CONSTANTS.StackCardOffset}px)`,
+                      marginBottom: `${(array.length - index - 1) * CONSTANTS.StackCardOffset}px`
                     }
-                    key={item.title}
-                  >
-                    <StackCard
-                      title={item.title}
-                      skills={item.skills}
-                      index={index}
-                    />
-                  </div>
-                ))}
-              </div>
+                  }
+                  key={item.title}
+                >
+                  <StackCard
+                    title={item.title}
+                    skills={item.skills}
+                    index={index}
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
