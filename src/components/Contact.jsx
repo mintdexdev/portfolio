@@ -12,8 +12,6 @@ export default function Contact() {
         <ContainerX>
           <h2 className='mb-20 text-l9 text-center'>Contact</h2>
 
-
-
           <div className='text-center my-[100px]'>
 
             <p  >Let's make someting amazing together</p>
@@ -37,14 +35,14 @@ export default function Contact() {
 
           </div>
 
-          <div className='flex justify-between'>
+          <div className='text-center flex flex-col gap-4 sm:flex-row sm:justify-between '>
             <div className=''>
-              <p>Availibility?</p>
-              <p>Currently Available</p>
+              <p className=''>availibility?</p>
+              <p className='bg-neutral-300 rounded-full w-fit mx-auto px-5    sm:w-auto sm:p-0 sm:m-0 sm:bg-transparent '>Currently Available</p>
             </div>
             <div>
-              <p className='text-right'>for other inquires</p>
-              <p>{links.contactEmail}</p>
+              <p className='sm:text-right'>for other inquires:</p>
+              <p className='bg-neutral-300 rounded-full w-fit mx-auto px-5    sm:w-auto sm:p-0 sm:m-0 sm:bg-transparent '>{links.contactEmail}</p>
             </div>
           </div>
 

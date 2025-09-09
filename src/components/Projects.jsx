@@ -90,7 +90,7 @@ export default function Projects() {
 
             <div >
               {projectList.map((item, idx) => (
-                <div className='h-screen min-h-[640px] my-[100px] flex items-center'
+                <div className='lg:h-screen lg:min-h-[640px] my-[100px] flex items-center'
                   key={item.name}
                 >
                   <ProjectCard

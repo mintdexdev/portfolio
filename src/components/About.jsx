@@ -9,7 +9,7 @@ export default function About() {
     <section id='section-about' className='py-50' >
       <ContainerX>
 
-        <h2 className='mb-20 text-l9 text-center'>Projects</h2>
+        <h2 className='mb-20 text-l9 text-center'>About</h2>
 
         <div className='flex items-center justify-center'>
           <div>

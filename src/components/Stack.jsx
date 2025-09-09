@@ -2,25 +2,37 @@ import { developmentStackList, designStackList } from '@/data/lists.js'
 
 import ContainerX from '@/components/ui/ContainerX';
 import StackCard from '@/components/ui/StackCard';
+import { useViewportSize } from '@/context/ViewportSize';
 
 const CONSTANTS = {
   StackCardOffset: 120
 }
 
 export default function Stack() {
+  const viewportSize = useViewportSize()
+
+  if (viewportSize == "small") CONSTANTS.StackCardOffset = 70
+  else if (viewportSize == "medium") CONSTANTS.StackCardOffset = 70
 
   return (
     <section id='section-stack'>
       <div className='pt-20'>
         <ContainerX>
           <h2 className='mb-20 text-l9 text-center'>Skills</h2>
-          <div className='flex gap-4'>
+          <div className='flex gap-4 flex-col lg:flex-row'>
 
-            <div className='w-1/4 min-w-[280px] h-screen sticky top-0 grid place-items-center'>
-              <h3 className='text-l4'>Development</h3>
-            </div>
+            {
+              viewportSize == "large" ?
+                < div className='w-1/4 min-w-[280px] h-screen sticky top-0 grid place-items-center'>
+                  <h3 className='text-l4'>Development</h3>
+                </div> :
+                < div className=' sticky top-0 '>
+                  <h3 className='text-l4'>Development</h3>
+                </div>
+            }
 
-            <div className='w-3/4'>
+
+            <div className='w-full lg:w-3/4'>
               {developmentStackList.map((item, index, array) => (
                 <div
                   className='sticky'
@@ -42,13 +54,19 @@ export default function Stack() {
             </div>
           </div>
 
-          <div className='flex gap-4'>
+          <div className='flex gap-4 flex-col lg:flex-row'>
 
-            <div className='w-1/4 min-w-[280px] h-screen sticky top-0 grid place-items-center'>
-              <h3 className='text-l4'>Design</h3>
-            </div>
+            {
+              viewportSize == "large" ?
+                < div className='w-1/4 min-w-[280px] h-screen sticky top-0 grid place-items-center'>
+                  <h3 className='text-l4'>Design</h3>
+                </div> :
+                < div className=' sticky top-[0] '>
+                  <h3 className='text-l4'>Design</h3>
+                </div>
+            }
 
-            <div className='w-3/4'>
+            <div className='w-full lg:w-3/4'>
               {designStackList.map((item, index, array) => (
                 <div className=' sticky '
                   style={
@@ -70,7 +88,7 @@ export default function Stack() {
           </div>
 
         </ContainerX>
-      </div>
-    </section>
+      </div >
+    </section >
   )
 }

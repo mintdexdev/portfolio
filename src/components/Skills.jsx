@@ -44,7 +44,7 @@ export default function Skills() {
           <div className='mb-20 text-l9 text-center'>Skills</div>
 
           <div ref={skillContainer}
-            className='text-l2 w-1/2 mx-auto'>
+            className='text-l2 lg:w-1/2 mx-auto'>
 
             {skillList.map((item, i) => (
               <div className=' border border-white/24 bg-zinc-900 rounded-2xl px-4 py-3 my-4'

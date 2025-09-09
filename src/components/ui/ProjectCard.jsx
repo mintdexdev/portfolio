@@ -34,7 +34,7 @@ export default function ProjectCard(
             title='View Source Code for this Project'
           >
             <ButtonDark>
-              View Source Code ↗
+              Source Code ↗
             </ButtonDark>
           </a>
           <a className="text-sm"
@@ -43,7 +43,7 @@ export default function ProjectCard(
             title='View Live Preview of this project'
           >
             <ButtonDark>
-              View Live ↗
+              Live ↗
             </ButtonDark>
           </a>
         </div>

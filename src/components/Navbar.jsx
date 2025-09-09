@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import ContainerX from './ui/ContainerX';
 import { navList } from '@/data/lists'
+import { useViewportSize } from '@/context/ViewportSize';
 
 export default function Navbar() {
+
+  const viewpostSize = useViewportSize()
 
   const [lastScrollY, setLastScrollY] = useState(window.scrollY)
   const [headerHideStyle, setHeaderHideStyle] = useState(null)
@@ -37,14 +40,21 @@ export default function Navbar() {
             DEX
           </a>
 
-          <ul className='flex gap-12'>
-            {navList.map((item) => (
-              <li className=' will-change-transform duration-300 hover:brightness-75 hover:scale-[1.02] active:scale-[0.98] '
-                key={item.name} >
-                <a href={item.link}>{item.name}</a>
-              </li>
-            ))}
-          </ul>
+          {viewpostSize !== "small" ?
+
+            <ul className='flex gap-12'>
+              {navList.map((item) => (
+                <li className=' will-change-transform duration-300 hover:brightness-75 hover:scale-[1.02] active:scale-[0.98] '
+                  key={item.name} >
+                  <a href={item.link}>{item.name}</a>
+                </li>
+              ))}
+            </ul>
+            :
+           <div>
+            <a href="#section-contact">Contact Me</a>
+           </div>
+          }
 
         </div>
 
