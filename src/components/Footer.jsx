@@ -34,7 +34,7 @@ export default function Footer() {
             <ul>
               {otherLinksList.map((item) => (
                 <li key={item.name}>
-                  <a href={item.link}>{item.name}</a>
+                  <a href={item.link} target='_blank'>{item.name}</a>
                 </li>
               ))}
             </ul>

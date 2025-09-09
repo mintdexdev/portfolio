@@ -27,6 +27,10 @@ export const otherLinksList = [
     name: "All Projects",
     link: links.allProjects
   },
+  {
+    name: "Email Me",
+    link: `mailTo:${links.workEmail}`
+  },
 ]
 
 

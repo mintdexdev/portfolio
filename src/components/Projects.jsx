@@ -21,8 +21,6 @@ export default function Projects() {
 
   const sectionRef = useRef();
 
-  const numberRef = useRef();
-
   useGSAP(() => {
     const section = sectionRef.current;
 
