@@ -6,11 +6,12 @@ import { socialList } from '@/data/links';
 export default function About() {
   return (
 
-    <section
-      id='section-about' >
+    <section id='section-about' className='py-50' >
       <ContainerX>
-        <div className=' section-about h-screen min-h-[640px] flex items-center justify-center'>
 
+        <h2 className='mb-20 text-l9 text-center'>Projects</h2>
+
+        <div className='flex items-center justify-center'>
           <div>
             <div className='max-w-[50ch] bg text-l2 text-justify'>
               <p className='my-12'>I am 'Deepak Gobari', or you can call me 'Dex'. I recently graduated with a Bachelor's degree in Computer Applications.</p>
@@ -30,6 +31,7 @@ export default function About() {
             </div>
           </div>
         </div>
+
       </ContainerX>
     </section>
   )

@@ -4,7 +4,7 @@ import ContainerX from '@/components/ui/ContainerX';
 import StackCard from '@/components/ui/StackCard';
 
 const CONSTANTS = {
-  StackCardOffset: 140
+  StackCardOffset: 120
 }
 
 export default function Stack() {

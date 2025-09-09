@@ -36,7 +36,6 @@ export default function Skills() {
           <h2>{skillList.title}</h2>
           <ul aria-label='List of Skills'>
             {skillList.hardSkills.map(skill => <li key={skill}>{skill}</li>)}
-            {skillList.softSkills.map(skill => <li key={skill}>{skill}</li>)}
           </ul>
         </div>
 
@@ -44,22 +43,14 @@ export default function Skills() {
           <div className='mb-20 text-l9 text-center'>{skillList.title}</div>
 
           <div ref={skillContainer}
-            className='text-l2'>
+            className='text-l2 w-1/2 mx-auto'>
 
             {skillList.hardSkills.map((item, i) => (
-              <div className='border bg-zinc-800 rounded-2xl px-4 py-3 my-4'
+              <div className=' border border-white/24 bg-zinc-900 rounded-2xl px-4 py-3 my-4'
                 key={item}>
                 {i + 1}. {item}
               </div>
             ))}
-
-            {skillList.softSkills.map((item, i) => (
-              <div className='border bg-zinc-800 rounded-2xl px-4 py-3 my-4'
-                key={item}>
-                {i + skillList.hardSkills.length + 1} {item}
-              </div>
-            ))}
-
           </div>
         </div>
       </ContainerX>

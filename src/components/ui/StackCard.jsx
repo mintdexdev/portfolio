@@ -10,8 +10,8 @@ export default function StackCard(
   return (
     <div className={`skills-card h-[640px] rounded-t-2xl `}    >
       <div className='p-5  flex justify-between'>
-        <div className='text-l3'>{title}</div>
-        <div className='text-l3'>{index + 1}</div>
+        <div className='text-l2'>{title}</div>
+        <div className='text-l2'>{index + 1}</div>
       </div>
       <div className='flex gap-5 flex-wrap border-t px-5 py-10'>
         {skills.map((skill) => (
