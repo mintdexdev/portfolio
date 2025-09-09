@@ -1,4 +1,4 @@
-import { developmentStackList, designStackList } from '@/data/stackList'
+import { developmentStackList, designStackList } from '@/data/lists.js'
 
 import ContainerX from '@/components/ui/ContainerX';
 import StackCard from '@/components/ui/StackCard';

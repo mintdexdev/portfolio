@@ -1,7 +1,7 @@
-import { ButtonDark, ButtonLightOutline } from '@/components/ui/Button';
-import ContainerX from '@/components/ui/ContainerX';
-import { socialList } from '@/data/links';
+import { links } from '@/data/links';
 
+import ContainerX from '@/components/ui/ContainerX';
+import { ButtonDark, ButtonLightOutline } from '@/components/ui/Button';
 
 export default function Contact() {
   return (
@@ -19,7 +19,7 @@ export default function Contact() {
             <p  >Let's make someting amazing together</p>
             <p className='mt-4 text-sm font-mono'> dexdevwork@gmail.com </p>
             <a className='block mb-2'
-              href={`mailto:${socialList.workEmail.link}`}
+              href={`mailto:${links.workEmail}`}
               title='send email to dex'
             >
               <ButtonDark>
@@ -27,7 +27,7 @@ export default function Contact() {
               </ButtonDark>
             </a>
             <a className='block mb-2'
-              href={socialList.x.link}
+              href={links.x}
               title='send email to dex'
               target='_blank'
             >
@@ -44,7 +44,7 @@ export default function Contact() {
             </div>
             <div>
               <p className='text-right'>for other inquires</p>
-              <p>{socialList.contactEmail.link}</p>
+              <p>{links.contactEmail}</p>
             </div>
           </div>
 

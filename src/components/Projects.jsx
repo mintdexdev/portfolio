@@ -1,11 +1,11 @@
 import { useRef, useState } from 'react';
 
-import { projectList } from '@/data/projectList.js';
+import { links } from '@/data/links';
+import { projectList } from '@/data/lists.js';
 
 import ContainerX from '@/components/ui/ContainerX'
 import ProjectCard from '@/components/ui/ProjectCard'
 import { ButtonDark } from './ui/Button';
-import { allProjectLink } from '@/data/links';
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -109,7 +109,7 @@ export default function Projects() {
             <h3 className='text-l3 text-center'>View all projects?</h3>
             <div className='flex justify-center mt-5'>
               <a className='text-lg'
-                href={allProjectLink}
+                href={links.allProjects}
                 target='_blank'
                 title='Check all project by me'
               >

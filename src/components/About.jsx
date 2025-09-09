@@ -1,7 +1,7 @@
-import { ButtonLight } from '@/components/ui/Button';
-import ContainerX from '@/components/ui/ContainerX';
-import { socialList } from '@/data/links';
+import { links } from '@/data/links';
 
+import ContainerX from '@/components/ui/ContainerX';
+import { ButtonLight } from '@/components/ui/Button';
 
 export default function About() {
   return (
@@ -20,7 +20,7 @@ export default function About() {
             </div>
             <div className='flex justify-end'>
               <a
-                href={socialList.github.link}
+                href={links.github}
                 title='View my GitHub Profile'
                 target='_blank'
               >

@@ -1,4 +1,4 @@
-import { navList } from '@/data/navList'
+import { socialLinksList, navList, otherLinksList } from '@/data/lists'
 
 import ContainerX from '@/components/ui/ContainerX';
 import { ButtonLightOutline } from './ui/Button';
@@ -19,6 +19,20 @@ export default function Footer() {
           <div className='flex justify-around py-10'>
             <ul>
               {navList.map((item) => (
+                <li key={item.name}>
+                  <a href={item.link}>{item.name}</a>
+                </li>
+              ))}
+            </ul>
+            <ul>
+              {socialLinksList.map((item) => (
+                <li key={item.name}>
+                  <a href={item.link} target='_blank'>{item.name}</a>
+                </li>
+              ))}
+            </ul>
+            <ul>
+              {otherLinksList.map((item) => (
                 <li key={item.name}>
                   <a href={item.link}>{item.name}</a>
                 </li>

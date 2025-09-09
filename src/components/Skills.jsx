@@ -1,11 +1,12 @@
 import { useRef } from 'react';
+import { skillList } from '@/data/lists.js';
 import ContainerX from '@/components/ui/ContainerX';
-import { skillList } from '@/data/skillList';
+
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(useGSAP, ScrollTrigger)
+
 export default function Skills() {
   const skillContainer = useRef(null);
 
@@ -33,19 +34,19 @@ export default function Skills() {
       id='section-skills' >
       <ContainerX>
         <div className='sr-only'>
-          <h2>{skillList.title}</h2>
+          <h2>Skills</h2>
           <ul aria-label='List of Skills'>
-            {skillList.hardSkills.map(skill => <li key={skill}>{skill}</li>)}
+            {skillList.map(skill => <li key={skill}>{skill}</li>)}
           </ul>
         </div>
 
         <div aria-hidden="true" className='overflow-clip' >
-          <div className='mb-20 text-l9 text-center'>{skillList.title}</div>
+          <div className='mb-20 text-l9 text-center'>Skills</div>
 
           <div ref={skillContainer}
             className='text-l2 w-1/2 mx-auto'>
 
-            {skillList.hardSkills.map((item, i) => (
+            {skillList.map((item, i) => (
               <div className=' border border-white/24 bg-zinc-900 rounded-2xl px-4 py-3 my-4'
                 key={item}>
                 {i + 1}. {item}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import ContainerX from './ui/ContainerX';
-import { navList } from '@/data/navList'
+import { navList } from '@/data/lists'
 
 export default function Navbar() {
 
