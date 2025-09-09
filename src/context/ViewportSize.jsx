@@ -21,7 +21,7 @@ export const ViewportSizeProvider = ({ children }) => {
   }, [])
 
   return (
-    <ViewportSizeContext.Provider value={{ viewportSize }}>
+    <ViewportSizeContext.Provider value={viewportSize}>
       {children}
     </ViewportSizeContext.Provider>
   )
