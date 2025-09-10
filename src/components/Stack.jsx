@@ -18,7 +18,7 @@ export default function Stack() {
     <section id='section-stack'>
       <div className='pt-20'>
         <ContainerX>
-          <h2 className='mb-20 text-l9 text-center'>Skills</h2>
+          <h2 className='mb-20 text-l9 text-center'>Stack</h2>
           <div className='flex gap-4 flex-col lg:flex-row'>
 
             {
